@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="pokeStyle.css">
+</head>
+<body>
+    <div class="background-container">
+        <img class="logo"src="Pokemon-logo.png">
+        <img class="background" src="pokeBackground.jpg">
+        <div class="pokemon-container">
+            <p>Search for Pokémon Name or ID:</p>
+            <input type="text" name="search-input" id="search-input" required>
+            <button id="search-button">Search</button>
+            <div class="card">
+                <h2 id="pokemon-name"></h2>
+                <h2 id="pokemon-id"></h2>
+                <h2 id="hp"></h2>
+                <p></p>
+                <div id="sprite-container" class="sprite-container"></div>
+                <div id="types"></div>
+            </div>
+            <table class="stats-table">
+                <tbody>
+                <tr>
+                <td class="strong">Base</td>
+                <td class="strong">Stats</td>
+                </tr>
+                <tr>
+                <td>Height:</td>
+                <td id="height"></td>
+                </tr>
+                <tr>
+                <td>Weight:</td>
+                <td id="weight"></td>
+                </tr>
+                <tr>
+                <td>Attack:</td>
+                <td id="attack"></td>
+                </tr>
+                <tr>
+                <td>Defense: </td>
+                <td id="defense"></td>
+                </tr>
+                <tr>
+                <td>Sp. Attack:</td>
+                <td id="special-attack"></td>
+                </tr>
+                <tr>
+                <td>Sp. Defense:</td>
+                <td id="special-defense"></td>
+                </tr>
+                <tr>
+                <td>Speed: </td>
+                <td id="speed"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
