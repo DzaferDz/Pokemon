@@ -115,11 +115,6 @@ td:not(.strong){
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left:50%;
-    top: 20%;
-    width: 60%;
-    transform: translate(-50%);
   }
   
   #sprite {
@@ -135,6 +130,7 @@ td:not(.strong){
     bottom: 7%;
     padding-left: 20px;
     justify-content: center;
+    color: white;
   }
 
   .normal {

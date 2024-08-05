@@ -14,10 +14,10 @@ const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 
 const getPokemon = async () => {
-try  {
-  const nameOrId = searchInput.value().toLowerCase();
-    const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${nameOrId}`);
-    const data = await res.json()
+  try {
+    const nameOrId = searchInput.value.toLowerCase();
+     const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${nameOrId}`);
+    const data = await response.json();
     pokemonName.textContent = `${data.name.toUpperCase()}`;
     pokemonID.textContent = `#${data.id}`;
     weight.textContent = `${data.weight}`;
@@ -43,21 +43,23 @@ try  {
     console.log(`Pokémon not found: ${err}`);
   }
 }
+
 const resetDisplay = () => {
-    const sprite = document.getElementById('sprite');
-    if (sprite) sprite.remove();
-  
-    // reset stats
-    pokemonName.textContent = '';
-    pokemonID.textContent = '';
-    types.innerHTML = '';
-    height.textContent = '';
-    weight.textContent = '';
-    hp.textContent = '';
-    attack.textContent = '';
-    defense.textContent = '';
-    specialAttack.textContent = '';
-    specialDefense.textContent = '';
-    speed.textContent = '';
-  };
-  searchButton.addEventListener("click",getPokemon);
+  const sprite = document.getElementById('sprite');
+  if (sprite) sprite.remove();
+
+  // reset stats
+  pokemonName.textContent = '';
+  pokemonID.textContent = '';
+  types.innerHTML = '';
+  height.textContent = '';
+  weight.textContent = '';
+  hp.textContent = '';
+  attack.textContent = '';
+  defense.textContent = '';
+  specialAttack.textContent = '';
+  specialDefense.textContent = '';
+  speed.textContent = '';
+};
+
+searchButton.addEventListener("click", getPokemon);
